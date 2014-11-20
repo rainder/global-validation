@@ -55,11 +55,17 @@ describe('Single validation', function () {
 
     var ctx = {};
 
-    var v = String.fn(function () {
+    String.fn(function () {
       expect(this).to.be.equal(ctx);
-    });
+    }).call(ctx, '123');
 
-    v.call(ctx, '123');
+    String.fn(function (value, value2, value3) {
+      expect(this).to.be.equal(ctx);
+      expect(value).to.be.equal('999');
+      expect(value2).to.be.equal('234');
+      expect(value3).to.be.equal(8);
+    }).call(ctx, '999', '234', 8);
+
   });
 
   it('should fail', function () {
