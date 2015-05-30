@@ -9,11 +9,11 @@ require('global-validation');
 
 //string
 var validate = String.type().min(5);
-validate('Hello world');
+validate('Hello world'); //ok
 
 //array
 var validate = Array.type().min(3).oneOf([1, 2, 3, 4, 5]).typeOf(Number);
-validate([1, 1, 2, 2, 1, 2]);
+validate([1, 1, 2, 2, 1, 2]); //ok
 
 //object
 var validate = Object.type().fn(function (value, arg1, arg2) {
@@ -22,6 +22,10 @@ var validate = Object.type().fn(function (value, arg1, arg2) {
 });
 validate.call(ctx, {
   name: 'Skerla'
-}, arg1, arg2);
+}, arg1, arg2); //ok
+
+//object
+var validate = Object.type();
+validate.call(ctx, 'not an object'); //fails
 
 ```
