@@ -18,5 +18,16 @@
   },
   "dependencies": {
     "lodash": "^2.4.1"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rainder/global-validation.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rainder/global-validation/issues"
+  },
+  "homepage": "https://github.com/rainder/global-validation#readme"
 }
