@@ -2,7 +2,7 @@
   "name": "global-validation",
   "version": "0.1.0",
   "description": "Validation methods",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "mocha"
   },

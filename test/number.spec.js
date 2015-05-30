@@ -80,4 +80,19 @@ describe('Number tests', function () {
     expect(validate(10).success).not.to.be.ok;
   });
 
+  it('should pass between', function () {
+    let validate;
+
+    validate = Number.between([5, 10]);
+    expect(validate(7).success).to.be.ok;
+  });
+
+  it('should fail between', function () {
+    let validate;
+
+    validate = Number.between([5, 10]);
+    expect(validate(3).success).not.to.be.ok;
+    expect(validate(11).success).not.to.be.ok;
+  });
+
 });
