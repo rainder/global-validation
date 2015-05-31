@@ -95,4 +95,13 @@ describe('Number tests', function () {
     expect(validate(11).success).not.to.be.ok;
   });
 
+  it('should pass fn', function () {
+    let validate;
+
+    validate = Number.fn(function (){
+
+    });
+    expect(validate(7).success).to.be.ok;
+  });
+
 });

@@ -108,5 +108,14 @@ describe('String tests', function () {
     expect(validate('123a').success).not.to.be.ok;
   });
 
+  it('should pass fn', function () {
+    let validate;
+
+    validate = String.fn(function (){
+
+    });
+    expect(validate(7).success).to.be.ok;
+  });
+
 
 });
