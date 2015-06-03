@@ -20,4 +20,9 @@ describe('Object tests', function () {
     expect(validate().success).to.be.equal(false);
   });
 
+  it('should fail required', function () {
+    let validate = Object.type();
+    expect(validate([]).success).to.be.equal(false);
+  });
+
 });
